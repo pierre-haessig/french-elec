@@ -1,0 +1,29 @@
+searching files like "RTE_eCO2mix_daily/*.csv"
+4255 data files found
+from "RTE_CO2mix_2000-06-24.csv" to "RTE_CO2mix_2012-02-16.csv"
+
+Headers : 12 changes found, 5 different kinds
+ * starting with "RTE_CO2mix_2000-06-24.csv":
+   Heures	Consommation	PrévisionJ-1
+ * starting with "RTE_CO2mix_2008-05-29.csv":
+   Heures	Consommation	PrévisionJ-1	PrévisionJ
+ * starting with "RTE_CO2mix_2008-07-31.csv":
+   Heures	Consommation	PrévisionJ-1
+ * starting with "RTE_CO2mix_2008-08-01.csv":
+   Heures	Consommation	PrévisionJ-1	PrévisionJ
+ * starting with "RTE_CO2mix_2009-07-28.csv":
+   Heures	Consommation	PrévisionJ-1
+ * starting with "RTE_CO2mix_2009-07-29.csv":
+   Heures	Consommation	PrévisionJ-1	PrévisionJ
+ * starting with "RTE_CO2mix_2009-12-05.csv":
+   Heures	Consommation	PrévisionJ-1
+ * starting with "RTE_CO2mix_2009-12-06.csv":
+   Heures	Consommation	PrévisionJ-1	PrévisionJ
+ * starting with "RTE_CO2mix_2010-07-08.csv":
+   Heures	Fioul + pointe	Charbon	Gaz	Nucléaire	Eolien	Hydraulique	Autres	Solde	Co2	Consommation	PrévisionJ-1	PrévisionJ
+ * starting with "RTE_CO2mix_2010-11-16.csv":
+   Heures	Consommation	PrévisionJ-1	Fioul + pointe	Charbon	Gaz	Nucléaire	Eolien	Hydraulique	Autres	Solde	Co2	PrévisionJ
+ * starting with "RTE_CO2mix_2011-09-24.csv":
+   Heures	Consommation	PrévisionJ-1	Fioul + pointe	Charbon	Gaz	Nucléaire	Eolien	Hydraulique	Autres	Solde	Co2
+ * starting with "RTE_CO2mix_2011-09-25.csv":
+   Heures	Consommation	PrévisionJ-1	Fioul + pointe	Charbon	Gaz	Nucléaire	Eolien	Hydraulique	Autres	Solde	Co2	PrévisionJ
