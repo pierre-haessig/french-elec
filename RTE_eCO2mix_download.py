@@ -60,6 +60,27 @@ def get_daily_data(day):
     #print('extracting %s...' % conso_filename)
     # Open the data file in the zip archive
     return z.open(conso_filename)
+# end get_daily_data()
+
+def get_data_range(start_day, stop_day, target_dir):
+    '''download a range of daily data from RTE éCO2mix
+    between `start_day` and `stop_day` (excluded)
+    
+    data consist of CSV files (tab separated, utf-8 encoding).
+    Those files are saved in `target_dir`.
+    '''
+    name_pattern = os.path.join(target_dir, 'RTE_CO2mix_%s.csv')
+    for day in day_range(start_day, stop_day):
+        datafilename = name_pattern % day.isoformat()
+        if os.path.exists(datafilename):
+            print('skipping day %s [already downloaded]' % day.isoformat())
+            continue
+        # 1) Grab the daily data:
+        datafile = get_daily_data(day)
+        # 2) Write the CSV file:
+        with codecs.open(datafilename, 'w', encoding='utf-8') as out:
+            out.write(datafile.read().decode('iso-8859-15'))
+# end get_data_range()
 
 # Where to dowload the data files:
 target_dir = 'RTE_eCO2mix_daily'
@@ -68,14 +89,8 @@ target_dir = 'RTE_eCO2mix_daily'
 start_day = date(2000,6,24)
 stop_day = date.today() # stop excluded from range
 
-for day in day_range(start_day, stop_day):
-    datafilename = os.path.join(target_dir, 'RTE_CO2mix_%s.csv' % day.isoformat())
-    if os.path.exists(datafilename):
-        print('skipping day %s [already downloaded]' % day.isoformat())
-        continue
-    # 1) Grab the daily data:
-    datafile = get_daily_data(day)
-    # 2) Write the CSV file:
-    with codecs.open(datafilename, 'w', encoding='utf-8') as out:
-        out.write(datafile.read().decode('iso-8859-15'))
+if __name__ == '__main__':
+    print('Downloading RTE éCO2mix data')
+    print(' from day %s to %s' % (start_day.isoformat(), stop_day.isoformat()))
+    get_data_range(start_day, stop_day, target_dir)
 
