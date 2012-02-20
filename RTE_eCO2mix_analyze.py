@@ -7,7 +7,7 @@ analyze the CSV file formats of the "RTE éCO2mix" data files
 
 Pierre Haessig — February 2012
 """
-
+from __future__ import print_function
 import os.path, codecs
 from glob import glob
 
@@ -45,3 +45,10 @@ print('\nHeaders : %d changes found, %d different kinds' %\
 for header, startfile in zip(header_collection, header_first_occurence):
     print(' * starting with "%s":' % os.path.basename(startfile))
     print("   %s" % header.encode('utf-8'))
+
+label_collection = set([label for header in  header_collection
+                              for label in header.split('\t')])
+label_collection = list(label_collection)
+label_collection.sort()
+print('\nLabels : %d different found' % len(label_collection))
+print('\n'.join(label_collection))
