@@ -14,10 +14,11 @@ http://www.rte-france.com/fr/developpement-durable/maitriser-sa-consommation-ele
 About the data
 ==============
 
-Data is available as 15 minutes averages.
+Data is available as 15 minutes averages. 
+The richness of the content increases over time :
 
- * starting June 24th, 2000, *consumption* + *D-1 forecast* is available
- * starting July 8th, 2010, production data is also available 
+* starting June 24th, 2000, *consumption* + *D-1 forecast* is available
+* starting July 8th, 2010, production data is also available
   (detailed by production means : nuclear, hydro, wind, ...)
 
 *Note* : RTE does't guarantee this data to be accurate.
@@ -39,7 +40,7 @@ located in the dedicated subdirectory `analysis_examples`
 
 * *elec_consumption.py*
   plots the *weekly consumption average* over the 2000 - 2012 period.
-  finds the consumption *records* over this period.
+  It also finds the consumption *records* over this period.
 
 .. image:: https://github.com/pierre-haessig/french-elec/raw/master/analysis_examples/weekly_consumption_2001-2011_with_records.png
     :height: 20em
