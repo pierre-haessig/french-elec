@@ -23,6 +23,7 @@ reordered_header = [u'Consommation', u'PrévisionJ-1', u'PrévisionJ',
 filename_pattern = os.path.join('RTE_eCO2mix_daily','RTE_CO2mix_%s.csv')
 
 # First day with a valid header : June 24th, 2000
+# First day with production data : July 8th, 2010
 start_day = dt.date(2000,6,24)
 stop_day = dt.date.today() # stop excluded from range
 
