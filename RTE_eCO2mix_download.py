@@ -8,6 +8,7 @@ Source : http://www.rte-france.com/fr/developpement-durable/maitriser-sa-consomm
 Pierre Haessig — December 2011
 updates:
  * february 2012 : zip file unpacking
+ * january 2013 : new download URL (part of "éCO2mix v2" changes)
 """
 
 import urllib, urllib2
@@ -74,6 +75,7 @@ def get_data_range(start_day, stop_day, target_dir):
     for day in day_range(start_day, stop_day):
         datafilename = name_pattern % day.isoformat()
         if os.path.exists(datafilename):
+            # TODO : needs a smarter skipping algorithm because of data consolidation (at the end of each month)
             print('skipping day %s [already downloaded]' % day.isoformat())
             continue
         # 1) Grab the daily data:
