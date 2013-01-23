@@ -1,5 +1,5 @@
 :::::::::::::::::
-RTE éco2mix tools
+RTE éCO2mix tools
 :::::::::::::::::
 
 Various simple tools to play with the *RTE éco2mix* data :
@@ -8,7 +8,8 @@ provided by the French Transmission system operator (TSO) RTE.
 
 **Original data source [FR]** : RTE's website
 
-http://www.rte-france.com/fr/developpement-durable/maitriser-sa-consommation-electrique/eco2mix-consommation-production-et-contenu-co2-de-l-electricite-francaise
+http://www.rte-france.com/fr/developpement-durable/eco2mix
+http://www.rte-france.com/fr/developpement-durable/eco2mix/telechargement-de-donnees
 
 
 About the data
@@ -23,6 +24,10 @@ The richness of the content increases over time :
 
 *Note* : RTE does't guarantee this data to be accurate.
 It is provided for "informative" purpose only.
+
+*Note2* : starting December 2012, RTE moved to "éCO2mix v2" file format,
+described in "specifications_fichiers_eco2mix_V2.pdf" [FR]
+
 
 Tools
 =====

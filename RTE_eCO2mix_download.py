@@ -42,13 +42,14 @@ def get_daily_data(day):
     '''
     print('dowloading RTE data for day %s...' % day.isoformat())
     date_str = day.strftime('%d/%m/%Y') # like '31/02/2012'
-    # Forge the HTTP POST request 
-    url = 'http://clients.rte-france.com/servlets/MixtrServlet?dl=DATAJOURXLS'
-    content = urllib.urlencode([('jour',date_str),('dl','Télécharger')])
+    # Forge the HTTP GET request 
+    url = 'http://www.rte-france.com/curves/eco2mixDl'
+    content = urllib.urlencode([('date',date_str)])
     # Download the zipped data:
     a = urllib.urlopen(url,content)
     # Add some sanity checks
-    assert a.headers['content-type'] == 'application/zip'
+    # 'content-disposition' header is 'attachment; filename="eCO2mix_RTE_2013-01-01.zip"'
+    assert a.headers['content-disposition'].startswith('attachment; filename=')
     # Write the zip archive to a tmp file
     tmp = TemporaryFile()
     tmp.write(a.read())
